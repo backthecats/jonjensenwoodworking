@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jon Jensen Woodworking & Flags | Oak Ridge, MO</title>
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons for quick contact/feature badges -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    :root {
+      --wood-charcoal: #1c1917; /* Slate Black matching the logo */
+      --wood-brown: #3b271b;    /* Rich Walnut */
+      --wood-accent: #9a4823;   /* Warm Cedar / Sienna */
+      --wood-light: #fbf9f5;    /* Off-white canvas */
+      --wood-border: #e7dfd5;
+    }
+
+    body {
+      background-color: var(--wood-light);
+      color: #262320;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar-wood {
+      background-color: var(--wood-charcoal);
+    }
+    .navbar-brand img {
+      height: 48px;
+      width: auto;
+      border-radius: 50%;
+      background: #fff;
+      padding: 1px;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(28, 25, 23, 0.92), rgba(40, 28, 20, 0.94)),
+                  radial-gradient(circle at center, #4a3427, #1c1917);
+      color: #fff;
+      padding: 4rem 1rem 3.5rem;
+      text-align: center;
+    }
+
+    .hero-logo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background-color: #fff;
+      padding: 3px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      margin-bottom: 1.5rem;
+    }
+
+    /* Buttons */
+    .btn-wood {
+      background-color: var(--wood-accent);
+      color: #ffffff;
+      border: none;
+      padding: 0.75rem 1.75rem;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-wood:hover, .btn-wood:active {
+      background-color: #7d3515;
+      color: #ffffff;
+    }
+
+    .btn-wood-outline {
+      border: 2px solid var(--wood-accent);
+      color: var(--wood-accent);
+      background: transparent;
+      font-weight: 600;
+      padding: 0.75rem 1.75rem;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-wood-outline:hover {
+      background-color: var(--wood-accent);
+      color: #ffffff;
+    }
+
+    /* Cards */
+    .wood-card {
+      border: 1px solid var(--wood-border);
+      border-radius: 8px;
+      overflow: hidden;
+      background-color: #ffffff;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .wood-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+    }
+
+  .card-img-top {
+      height: 280px;             /* Gives the photos more room */
+      object-fit: contain;       /* Shows 100% of the photo without any cropping */
+      background-color: #1e1b18; /* Dark charcoal letterbox matching the brand so wide/tall photos blend seamlessly */
+      padding: 6px;              /* Subtle breathing room around edges */
+    }
+
+    .badge-custom {
+      background-color: #fceee6;
+      color: var(--wood-accent);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      border: 1px solid #f2d2c2;
+    }
+
+    .badge-completed {
+      background-color: #eee9e1;
+      color: #59534c;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    /* Accordion FAQ */
+    .accordion-item {
+      border: 1px solid var(--wood-border);
+      margin-bottom: 0.75rem;
+      border-radius: 6px !important;
+      overflow: hidden;
+    }
+
+    .accordion-button {
+      font-weight: 600;
+      color: var(--wood-charcoal);
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: #fbf5ee;
+      color: var(--wood-accent);
+      box-shadow: none;
+    }
+
+    .accordion-button:focus {
+      border-color: var(--wood-accent);
+      box-shadow: 0 0 0 0.25rem rgba(154, 72, 35, 0.2);
+    }
+
+    footer {
+      background-color: var(--wood-charcoal);
+      color: #b8b0a5;
+    }
+	  /* Carousel controls inside cards */
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 12%;
+      background: rgba(0, 0, 0, 0.2);
+      transition: background 0.2s ease;
+    }
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .carousel-indicators [data-bs-target] {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin: 0 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-wood sticky-top shadow-sm py-2">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src='images/logo.jpg' alt="Jon Jensen Woodworking & Flags Logo">
+        <span class="fw-bold d-none d-sm-inline">Jon Jensen Woodworking</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#made-to-order">Made to Order</a></li>
+          <li class="nav-item"><a class="nav-link" href="#past-creations">Past Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-semibold" href="#contact">Custom Quote</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="hero">
+    <div class="container py-3">
+      <img src="images/logo.jpg" alt="Jon Jensen Woodworking and Flags" class="hero-logo img-fluid">
+      <h1 class="display-5 fw-bold mb-2">Jon Jensen Woodworking & Flags</h1>
+      <p class="text-light-50 mb-1 fs-5">Oak Ridge, Missouri</p>
+      <p class="lead col-lg-8 mx-auto text-light opacity-90 my-3">
+        "I make customized challenge coin holder flags, cedar planters, and anything else you can think of!"
+      </p>
+      <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mt-4">
+        <a href="#contact" class="btn btn-wood btn-lg">Commission a Project</a>
+        <a href="#made-to-order" class="btn btn-outline-light btn-lg">Browse Available Items</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container py-5">
+
+    <!-- Section 1: Made to Order / Commission Items -->
+    <section id="made-to-order" class="mb-5 pt-3">
+      <div class="text-center mb-4">
+        <span class="badge badge-custom px-3 py-2 mb-2 text-uppercase">Custom Commission Offerings</span>
+        <h2 class="fw-bold">Available to Custom Order</h2>
+        <p class="text-muted col-lg-6 mx-auto">These staple pieces can be built to order and personalized with your desired dimensions, wood species, stains, and military or first-responder emblems.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Item 1: Coin Holder Flags -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 wood-card">
+            <img src="images/challenge-coin-flag.jpg" class="card-img-top" alt="Wooden challenge coin holder flag">
+            <div class="card-body d-flex flex-column">
+              <span class="badge badge-custom mb-2 align-self-start py-2 px-2">Featured Specialty</span>
+              <h3 class="h5 card-title fw-bold">Challenge Coin Holder Flags</h3>
+              <p class="card-text text-muted flex-grow-1">Handcrafted wooden American flags with tiered shelves to display military, law enforcement, fire department, and commemorative challenge coins. Custom sizes and burned or stained finishes available.</p>
+              <a href="#contact" class="btn btn-sm btn-wood-outline mt-2">Inquire About Sizing</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Cedar Planters -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 wood-card">
+            <img src="images/cedar-planter.jpg" class="card-img-top" alt="Handmade cedar planter boxes">
+            <div class="card-body d-flex flex-column">
+              <span class="badge badge-custom mb-2 align-self-start py-2 px-2">Outdoor / Garden</span>
+              <h3 class="h5 card-title fw-bold">Custom Cedar Planters</h3>
+              <p class="card-text text-muted flex-grow-1">Naturally rot- and insect-resistant cedar planter boxes built for patios, porches, and garden beds. Available in standalone square planter boxes, elevated raised garden boxes, or custom dimensions.</p>
+              <a href="#contact" class="btn btn-sm btn-wood-outline mt-2">Get a Planter Quote</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Rifle Holders & Gun Racks -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 wood-card">
+            <img src="images/rifle-holder.jpg" class="card-img-top" alt="Wooden rifle holder display">
+            <div class="card-body d-flex flex-column">
+              <span class="badge badge-custom mb-2 align-self-start py-2 px-2">Display & Storage</span>
+              <h3 class="h5 card-title fw-bold">Custom Wooden Rifle Holders</h3>
+              <p class="card-text text-muted flex-grow-1">Solid wood wall-mounted and tabletop rifle stands designed to securely display long guns, heirlooms, or sporting rifles with custom finishes.</p>
+              <a href="#contact" class="btn btn-sm btn-wood-outline mt-2">Inquire on Rifle Stands</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Section 2: Past Projects / Portfolio with Multi-Image Albums -->
+    <section id="past-creations" class="mb-5 pt-3">
+      <div class="text-center mb-4">
+        <span class="badge badge-completed px-3 py-2 mb-2 text-uppercase">Shop Portfolio</span>
+        <h2 class="fw-bold">Past Creations & Specialty Builds</h2>
+        <p class="text-muted col-lg-6 mx-auto">Browse through photo albums of custom builds and completed commissions delivered from our shop.</p>
+      </div>
+
+      <div class="row g-4">
+
+       <!-- Album 1: Custom Wooden & Challenge Coin Flags (7 Photos) -->
+        <div class="col-12 col-md-6 col-lg-6">
+          <div class="card h-100 wood-card">
+            
+            <!-- Carousel for Wooden Flags & Coin Holders -->
+            <div id="carouselPastFlags" class="carousel slide" data-bs-ride="false">
+              <!-- Indicators: 7 items (0 through 6) -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselPastFlags" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselPastFlags" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselPastFlags" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselPastFlags" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselPastFlags" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselPastFlags" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselPastFlags" data-bs-slide-to="6" aria-label="Slide 7"></button>
+              </div>
+
+              <!-- Slides: 7 items -->
+              <div class="carousel-inner">
+                <!-- Coin Holder Flags -->
+                <div class="carousel-item active">
+                  <img src="images/challenge-coin-flag.jpg" class="d-block w-100 card-img-top" alt="Wooden American Challenge Coin Flag Display">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/challenge-coin-flag-2.jpg" class="d-block w-100 card-img-top" alt="Burned Charred Wood Flag Coin Display with Custom Insignia">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/challenge-coin-flag-3.jpg" class="d-block w-100 card-img-top" alt="Red White and Blue Military Coin Display Flag">
+                </div>
+                <!-- Custom Wooden Flags -->
+                <div class="carousel-item">
+                  <img src="images/wood-flag.jpg" class="d-block w-100 card-img-top" alt="Custom Handcrafted Wooden American Flag">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/wood-flag-2.jpg" class="d-block w-100 card-img-top" alt="Charred Rustic Wooden Flag">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/wood-flag-3.jpg" class="d-block w-100 card-img-top" alt="Personalized Custom Wooden Wall Flag">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/wood-flag-4.jpg" class="d-block w-100 card-img-top" alt="Specialty Wooden Flag Display">
+                </div>
+              </div>
+
+              <!-- Prev / Next Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselPastFlags" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselPastFlags" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-completed py-1 px-2">Past Commission</span>
+                <small class="text-muted"><i class="bi bi-images me-1"></i>7 Photos</small>
+              </div>
+              <h3 class="h5 card-title fw-bold">Custom Wooden & Challenge Coin Flags</h3>
+              <p class="card-text text-muted flex-grow-1">Handcrafted wooden American flags built as standalone wall art or customized with tiered display shelves for military, law enforcement, and commemorative challenge coins. Available in charred, natural, or personalized color lines.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Album 2: Outdoor Loveseats -->
+        <div class="col-12 col-md-6 col-lg-6">
+          <div class="card h-100 wood-card">
+            
+            <!-- Carousel for Loveseat -->
+            <div id="carouselLoveseat" class="carousel slide" data-bs-ride="false">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselLoveseat" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselLoveseat" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/outdoor-loveseat.jpg" class="d-block w-100 card-img-top" alt="Small Outdoor Wooden Loveseat Front View">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/outdoor-loveseat-2.jpg" class="d-block w-100 card-img-top" alt="Outdoor Loveseat with Cushions on Brick Patio">
+                </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselLoveseat" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselLoveseat" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-completed py-1 px-2">Past Commission</span>
+                <small class="text-muted"><i class="bi bi-images me-1"></i>2 Photos</small>
+              </div>
+              <h3 class="h5 card-title fw-bold">Small Outdoor Loveseats</h3>
+              <p class="card-text text-muted flex-grow-1">Sturdy patio and porch furniture crafted from weather-resilient lumber, built to comfortable proportions for smaller outdoor living spaces.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Album 3: Custom Cedar Planter Boxes (Replaced Serving Trays) -->
+        <div class="col-12 col-md-6 col-lg-6">
+          <div class="card h-100 wood-card">
+            
+            <!-- Carousel for Cedar Planters -->
+            <div id="carouselPastPlanters" class="carousel slide" data-bs-ride="false">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselPastPlanters" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselPastPlanters" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselPastPlanters" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/cedar-planter.jpg" class="d-block w-100 card-img-top" alt="Assorted Handcrafted Cedar Planters and Raised Beds">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/cedar-planter-2.jpg" class="d-block w-100 card-img-top" alt="Cedar Planter Box Filled with Flowers on Deck">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/cedar-planter-3.jpg" class="d-block w-100 card-img-top" alt="Square Cedar Deck Planter Box with Blooms">
+                </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselPastPlanters" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselPastPlanters" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-completed py-1 px-2">Past Commission</span>
+                <small class="text-muted"><i class="bi bi-images me-1"></i>3 Photos</small>
+              </div>
+              <h3 class="h5 card-title fw-bold">Custom Cedar Planters</h3>
+              <p class="card-text text-muted flex-grow-1">Naturally rot- and insect-resistant cedar planter boxes and raised garden beds built for porches, decks, and yards in standalone square, rectangular, and elevated formats.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Album 4: Seasonal Decor -->
+        <div class="col-12 col-md-6 col-lg-6">
+          <div class="card h-100 wood-card">
+            
+            <!-- Carousel for Seasonal Decor -->
+            <div id="carouselDecor" class="carousel slide" data-bs-ride="false">
+              <!-- Indicators: 7 items (0 through 6) -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="6" aria-label="Slide 7"></button>
+              </div>
+
+              <!-- Slides: 7 items -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/seasonal-decor.jpg" class="d-block w-100 card-img-top" alt="Fall Wooden Blocks and Pumpkins">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/seasonal-decor-2.jpg" class="d-block w-100 card-img-top" alt="Handmade Wooden Holiday Decor">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/seasonal-decor-3.jpg" class="d-block w-100 card-img-top" alt="Wooden Holiday Signs and Displays">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/seasonal-decor-4.jpg" class="d-block w-100 card-img-top" alt="Custom Seasonal Wood Accents">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/seasonal-decor-5.jpg" class="d-block w-100 card-img-top" alt="Festive Porch and Tabletop Decor">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/seasonal-decor-6.jpg" class="d-block w-100 card-img-top" alt="Rustic Seasonal Wood Art">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/seasonal-decor-7.jpg" class="d-block w-100 card-img-top" alt="Handcrafted Holiday Woodcraft">
+                </div>
+              </div>
+
+              <!-- Prev / Next Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselDecor" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselDecor" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-completed py-1 px-2">Holiday & Home</span>
+                <small class="text-muted"><i class="bi bi-images me-1"></i>7 Photos</small>
+              </div>
+              <h3 class="h5 card-title fw-bold">Seasonal Wooden Decorations</h3>
+              <p class="card-text text-muted flex-grow-1">Hand-cut holiday signs, rustic porch leaners, pumpkin sets, and custom-themed wooden holiday decor for every season of the year.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 3: FAQ Accordion -->
+    <section id="faq" class="mb-5 pt-3">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">Frequently Asked Questions</h2>
+        <p class="text-muted">Have a unique idea? Here is how custom orders and local pickup work.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <div class="accordion shadow-sm" id="shopFAQ">
+
+            <!-- Question 1 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqHeading1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                  How do I order a custom challenge coin holder flag?
+                </button>
+              </h3>
+              <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#shopFAQ">
+                <div class="accordion-body text-muted">
+                  Simply send a message with the rough dimensions you need or the approximate number of challenge coins you want to display. We can customize stripe finishes (natural, charred, stained, or thin-blue/red line) and engrave specific emblems or nameplates.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqHeading2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                  Do you build custom projects not listed on this page?
+                </button>
+              </h3>
+              <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#shopFAQ">
+                <div class="accordion-body text-muted">
+                  Yes! The motto is <em>"anything else you can think of!"</em> If you have a sketch, a photo from Pinterest, or custom measurements for your home or porch, send it over for a quote.
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqHeading3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                  Where are you located and how does pickup work?
+                </button>
+              </h3>
+              <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#shopFAQ">
+                <div class="accordion-body text-muted">
+                  We are based in <strong>Oak Ridge, Missouri</strong>. Local pickup is available for Cape Girardeau, Jackson, Perryville, and surrounding Southeast Missouri areas. Delivery or shipping can be arranged depending on the project's size.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Contact / Order Call to Action -->
+    <section id="contact" class="pt-2">
+      <div class="card border-0 shadow-sm p-4 p-md-5 text-center col-lg-8 mx-auto wood-card">
+        <h2 class="fw-bold mb-2">Have a Build in Mind?</h2>
+        <p class="text-muted mb-4">
+          Ready to order a flag, planter box, or a one-of-a-kind custom woodworking build? Reach out directly on Facebook to discuss your ideas and get an estimate!
+        </p>
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+          <a href="https://www.facebook.com/profile.php?id=61592683551292" target="_blank" rel="noopener" class="btn btn-wood btn-lg d-inline-flex align-items-center justify-content-center gap-2">
+            <i class="bi bi-facebook"></i> Visit Facebook Page
+          </a>
+          <a href="https://m.me/61592683551292" target="_blank" rel="noopener" class="btn btn-outline-dark btn-lg d-inline-flex align-items-center justify-content-center gap-2">
+            <i class="bi bi-chat-dots"></i> Message on Messenger
+          </a>
+        </div>
+        <p class="small text-muted mt-3 mb-0">Located in Oak Ridge, MO &bull; Serving Southeast Missouri</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 mt-5">
+    <div class="container">
+      <p class="small mb-1">&copy; 2026 Jon Jensen Woodworking and Flags. Oak Ridge, Missouri.</p>
+      <p class="small text-white-50 mb-0">Custom Challenge Coin Flags &bull; Cedar Planters &bull; Handcrafted Custom Builds</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3 JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

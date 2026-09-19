@@ -101,11 +101,11 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.06);
     }
 
-  .card-img-top {
-      height: 280px;             /* Gives the photos more room */
+    .card-img-top {
+      height: 280px;             /* Gives the photos room */
       object-fit: contain;       /* Shows 100% of the photo without any cropping */
-      background-color: #1e1b18; /* Dark charcoal letterbox matching the brand so wide/tall photos blend seamlessly */
-      padding: 6px;              /* Subtle breathing room around edges */
+      background-color: #1e1b18; /* Dark charcoal letterbox matching the brand */
+      padding: 6px;              /* Breathing room around edges */
     }
 
     .badge-custom {
@@ -151,7 +151,8 @@
       background-color: var(--wood-charcoal);
       color: #b8b0a5;
     }
-	  /* Carousel controls inside cards */
+
+    /* Carousel controls inside cards */
     .carousel-control-prev,
     .carousel-control-next {
       width: 12%;
@@ -178,7 +179,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark navbar-wood sticky-top shadow-sm py-2">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-        <img src='images/logo.jpg' alt="Jon Jensen Woodworking & Flags Logo">
+        <img src="images/logo.jpg" alt="Jon Jensen Woodworking & Flags Logo">
         <span class="fw-bold d-none d-sm-inline">Jon Jensen Woodworking</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -213,7 +214,7 @@
 
   <main class="container py-5">
 
-    <!-- Section 1: Made to Order / Commission Items -->
+    <!-- Section 1: Made to Order / Commission Items (4 Items) -->
     <section id="made-to-order" class="mb-5 pt-3">
       <div class="text-center mb-4">
         <span class="badge badge-custom px-3 py-2 mb-2 text-uppercase">Custom Commission Offerings</span>
@@ -223,47 +224,223 @@
 
       <div class="row g-4">
         <!-- Item 1: Coin Holder Flags -->
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-6">
           <div class="card h-100 wood-card">
             <img src="images/challenge-coin-flag.jpg" class="card-img-top" alt="Wooden challenge coin holder flag">
             <div class="card-body d-flex flex-column">
               <span class="badge badge-custom mb-2 align-self-start py-2 px-2">Featured Specialty</span>
               <h3 class="h5 card-title fw-bold">Challenge Coin Holder Flags</h3>
               <p class="card-text text-muted flex-grow-1">Handcrafted wooden American flags with tiered shelves to display military, law enforcement, fire department, and commemorative challenge coins. Custom sizes and burned or stained finishes available.</p>
-              <a href="#contact" class="btn btn-sm btn-wood-outline mt-2">Inquire About Sizing</a>
+              <a href="#contact" class="btn btn-sm btn-wood-outline mt-2 align-self-start">Inquire About Sizing</a>
             </div>
           </div>
         </div>
 
-        <!-- Item 2: Cedar Planters -->
-        <div class="col-12 col-md-6 col-lg-4">
+        <!-- Item 2: Cedar Planters & Outdoor Accents (14 Photos with Auto-Scroll) -->
+        <div class="col-12 col-md-6 col-lg-6">
           <div class="card h-100 wood-card">
-            <img src="images/cedar-planter.jpg" class="card-img-top" alt="Handmade cedar planter boxes">
+            
+            <!-- Carousel for Cedar Planters (Auto-plays every 3.5 seconds) -->
+            <div id="carouselPlantersOrder" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500" data-bs-pause="hover">
+              <!-- Indicators: 14 items (0 through 13) -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselPlantersOrder" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselPlantersOrder" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselPlantersOrder" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselPlantersOrder" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselPlantersOrder" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselPlantersOrder" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselPlantersOrder" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#carouselPlantersOrder" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                <button type="button" data-bs-target="#carouselPlantersOrder" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                <button type="button" data-bs-target="#carouselPlantersOrder" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                <button type="button" data-bs-target="#carouselPlantersOrder" data-bs-slide-to="10" aria-label="Slide 11"></button>
+                <button type="button" data-bs-target="#carouselPlantersOrder" data-bs-slide-to="11" aria-label="Slide 12"></button>
+                <button type="button" data-bs-target="#carouselPlantersOrder" data-bs-slide-to="12" aria-label="Slide 13"></button>
+                <button type="button" data-bs-target="#carouselPlantersOrder" data-bs-slide-to="13" aria-label="Slide 14"></button>
+              </div>
+
+              <!-- Slides: 14 items -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/3 Tiered Planter with price.jpg" class="d-block w-100 card-img-top" alt="3 Tiered Cedar Planter with Pricing">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/3Pot Table Top with price.jpg" class="d-block w-100 card-img-top" alt="3 Pot Tabletop Planter with Pricing">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/6 Vertical Trellis.jpg" class="d-block w-100 card-img-top" alt="6 Vertical Trellis Planter">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Box A 3 Picket Planter with price.jpg" class="d-block w-100 card-img-top" alt="Box A 3 Picket Planter with Pricing">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Box E Bench Planter with price.jpg" class="d-block w-100 card-img-top" alt="Box E Bench Planter with Pricing">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Box G 46 Long Planter Box with price.jpg" class="d-block w-100 card-img-top" alt="Box G 46 Inch Long Planter Box with Pricing">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Box H Tall Planter Box with price.jpg" class="d-block w-100 card-img-top" alt="Box H Tall Planter Box with Pricing">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Box J Mailbox Post Planter with price.jpg" class="d-block w-100 card-img-top" alt="Box J Mailbox Post Planter with Pricing">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Box K Raised Garden Bed with price.jpg" class="d-block w-100 card-img-top" alt="Box K Raised Garden Bed with Pricing">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Box M Tapered Planter Box with price.jpg" class="d-block w-100 card-img-top" alt="Box M Tapered Planter Box with Pricing">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Planter Box P with price.jpg" class="d-block w-100 card-img-top" alt="Planter Box P with Pricing">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Small Planter with price.jpg" class="d-block w-100 card-img-top" alt="Small Cedar Planter with Pricing">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Small Bench.png" class="d-block w-100 card-img-top" alt="Handcrafted Wooden Small Bench">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Small Stool.png" class="d-block w-100 card-img-top" alt="Handcrafted Wooden Small Stool">
+                </div>
+              </div>
+
+              <!-- Manual Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselPlantersOrder" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselPlantersOrder" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
             <div class="card-body d-flex flex-column">
-              <span class="badge badge-custom mb-2 align-self-start py-2 px-2">Outdoor / Garden</span>
-              <h3 class="h5 card-title fw-bold">Custom Cedar Planters</h3>
-              <p class="card-text text-muted flex-grow-1">Naturally rot- and insect-resistant cedar planter boxes built for patios, porches, and garden beds. Available in standalone square planter boxes, elevated raised garden boxes, or custom dimensions.</p>
-              <a href="#contact" class="btn btn-sm btn-wood-outline mt-2">Get a Planter Quote</a>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-custom py-1 px-2">Outdoor / Garden</span>
+                <small class="text-muted"><i class="bi bi-images me-1"></i>14 Styles & Options</small>
+              </div>
+              <h3 class="h5 card-title fw-bold">Custom Cedar Planters & Outdoor Accents</h3>
+              <p class="card-text text-muted flex-grow-1">Naturally rot- and insect-resistant cedar planter boxes, tiered planters, raised garden beds, mailbox post planters, trellises, and outdoor benches/stools built for porches and decks.</p>
+              <a href="#contact" class="btn btn-sm btn-wood-outline mt-2 align-self-start">Get a Planter Quote</a>
             </div>
           </div>
         </div>
 
         <!-- Item 3: Rifle Holders & Gun Racks -->
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-6">
           <div class="card h-100 wood-card">
             <img src="images/rifle-holder.jpg" class="card-img-top" alt="Wooden rifle holder display">
             <div class="card-body d-flex flex-column">
               <span class="badge badge-custom mb-2 align-self-start py-2 px-2">Display & Storage</span>
               <h3 class="h5 card-title fw-bold">Custom Wooden Rifle Holders</h3>
               <p class="card-text text-muted flex-grow-1">Solid wood wall-mounted and tabletop rifle stands designed to securely display long guns, heirlooms, or sporting rifles with custom finishes.</p>
-              <a href="#contact" class="btn btn-sm btn-wood-outline mt-2">Inquire on Rifle Stands</a>
+              <a href="#contact" class="btn btn-sm btn-wood-outline mt-2 align-self-start">Inquire on Rifle Stands</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Seasonal Wooden Decorations (14 Photos with Auto-Scroll) -->
+        <div class="col-12 col-md-6 col-lg-6">
+          <div class="card h-100 wood-card">
+            
+            <!-- Carousel for Seasonal Decor (Auto-plays every 3.5 seconds) -->
+            <div id="carouselDecor" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500" data-bs-pause="hover">
+              <!-- Indicators: 14 items (0 through 13) -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="9" aria-label="Slide 10"></button>
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="10" aria-label="Slide 11"></button>
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="11" aria-label="Slide 12"></button>
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="12" aria-label="Slide 13"></button>
+                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="13" aria-label="Slide 14"></button>
+              </div>
+
+              <!-- Slides: 14 items -->
+              <div class="carousel-inner">
+                <!-- Original Photos -->
+                <div class="carousel-item active">
+                  <img src="images/seasonal-decor.jpg" class="d-block w-100 card-img-top" alt="Fall Wooden Blocks and Pumpkins">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/seasonal-decor-2.jpg" class="d-block w-100 card-img-top" alt="Handmade Wooden Holiday Decor">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/seasonal-decor-3.jpg" class="d-block w-100 card-img-top" alt="Wooden Holiday Signs and Displays">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/seasonal-decor-4.jpg" class="d-block w-100 card-img-top" alt="Custom Seasonal Wood Accents">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/seasonal-decor-5.jpg" class="d-block w-100 card-img-top" alt="Festive Porch and Tabletop Decor">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/seasonal-decor-6.jpg" class="d-block w-100 card-img-top" alt="Rustic Seasonal Wood Art">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/seasonal-decor-7.jpg" class="d-block w-100 card-img-top" alt="Handcrafted Holiday Woodcraft">
+                </div>
+
+                <!-- Added Styles -->
+                <div class="carousel-item">
+                  <img src="images/Herringbone Tree Trio.png" class="d-block w-100 card-img-top" alt="Herringbone Pattern Wooden Christmas Tree Trio">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Large Angled Tree.jpeg" class="d-block w-100 card-img-top" alt="Large Angled Wooden Holiday Tree">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Modern Christmas Tree.png" class="d-block w-100 card-img-top" alt="Modern Minimalist Wooden Christmas Tree">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Snowflake.png" class="d-block w-100 card-img-top" alt="Handcrafted Wooden Snowflake Decor">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Stacked Tree Trio.png" class="d-block w-100 card-img-top" alt="Stacked Tier Wooden Holiday Tree Trio">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Tree Trio.png" class="d-block w-100 card-img-top" alt="Rustic Wooden Christmas Tree Trio">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/Trio Pumpkins.png" class="d-block w-100 card-img-top" alt="Wooden Fall Trio Pumpkins Decor">
+                </div>
+              </div>
+
+              <!-- Manual Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselDecor" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselDecor" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge badge-custom py-1 px-2">Holiday & Home</span>
+                <small class="text-muted"><i class="bi bi-images me-1"></i>14 Photos</small>
+              </div>
+              <h3 class="h5 card-title fw-bold">Seasonal Wooden Decorations</h3>
+              <p class="card-text text-muted flex-grow-1">Handcrafted holiday accents including Christmas tree trios, modern angled trees, snowflakes, rustic pumpkins, tabletop blocks, and custom porch displays for every season.</p>
+              <a href="#contact" class="btn btn-sm btn-wood-outline mt-2 align-self-start">Order Seasonal Decor</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-  <!-- Section 2: Past Projects / Portfolio with Multi-Image Albums -->
+    <!-- Section 2: Past Projects / Portfolio with Multi-Image Albums (3 Items) -->
     <section id="past-creations" class="mb-5 pt-3">
       <div class="text-center mb-4">
         <span class="badge badge-completed px-3 py-2 mb-2 text-uppercase">Shop Portfolio</span>
@@ -273,8 +450,8 @@
 
       <div class="row g-4">
 
-       <!-- Album 1: Custom Wooden & Challenge Coin Flags (7 Photos) -->
-        <div class="col-12 col-md-6 col-lg-6">
+        <!-- Album 1: Custom Wooden & Challenge Coin Flags (7 Photos) -->
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100 wood-card">
             
             <!-- Carousel for Wooden Flags & Coin Holders -->
@@ -317,7 +494,7 @@
                 </div>
               </div>
 
-              <!-- Prev / Next Controls -->
+              <!-- Controls -->
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselPastFlags" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -334,13 +511,13 @@
                 <small class="text-muted"><i class="bi bi-images me-1"></i>7 Photos</small>
               </div>
               <h3 class="h5 card-title fw-bold">Custom Wooden & Challenge Coin Flags</h3>
-              <p class="card-text text-muted flex-grow-1">Handcrafted wooden American flags built as standalone wall art or customized with tiered display shelves for military, law enforcement, and commemorative challenge coins. Available in charred, natural, or personalized color lines.</p>
+              <p class="card-text text-muted flex-grow-1">Handcrafted wooden American flags built as standalone wall art or customized with tiered display shelves for military, law enforcement, and commemorative challenge coins.</p>
             </div>
           </div>
         </div>
 
-        <!-- Album 2: Outdoor Loveseats -->
-        <div class="col-12 col-md-6 col-lg-6">
+        <!-- Album 2: Outdoor Loveseats (2 Photos) -->
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100 wood-card">
             
             <!-- Carousel for Loveseat -->
@@ -380,8 +557,8 @@
           </div>
         </div>
 
-        <!-- Album 3: Custom Cedar Planter Boxes (Replaced Serving Trays) -->
-        <div class="col-12 col-md-6 col-lg-6">
+        <!-- Album 3: Custom Cedar Planter Boxes (3 Photos) -->
+        <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100 wood-card">
             
             <!-- Carousel for Cedar Planters -->
@@ -421,70 +598,6 @@
               </div>
               <h3 class="h5 card-title fw-bold">Custom Cedar Planters</h3>
               <p class="card-text text-muted flex-grow-1">Naturally rot- and insect-resistant cedar planter boxes and raised garden beds built for porches, decks, and yards in standalone square, rectangular, and elevated formats.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Album 4: Seasonal Decor -->
-        <div class="col-12 col-md-6 col-lg-6">
-          <div class="card h-100 wood-card">
-            
-            <!-- Carousel for Seasonal Decor -->
-            <div id="carouselDecor" class="carousel slide" data-bs-ride="false">
-              <!-- Indicators: 7 items (0 through 6) -->
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                <button type="button" data-bs-target="#carouselDecor" data-bs-slide-to="6" aria-label="Slide 7"></button>
-              </div>
-
-              <!-- Slides: 7 items -->
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="images/seasonal-decor.jpg" class="d-block w-100 card-img-top" alt="Fall Wooden Blocks and Pumpkins">
-                </div>
-                <div class="carousel-item">
-                  <img src="images/seasonal-decor-2.jpg" class="d-block w-100 card-img-top" alt="Handmade Wooden Holiday Decor">
-                </div>
-                <div class="carousel-item">
-                  <img src="images/seasonal-decor-3.jpg" class="d-block w-100 card-img-top" alt="Wooden Holiday Signs and Displays">
-                </div>
-                <div class="carousel-item">
-                  <img src="images/seasonal-decor-4.jpg" class="d-block w-100 card-img-top" alt="Custom Seasonal Wood Accents">
-                </div>
-                <div class="carousel-item">
-                  <img src="images/seasonal-decor-5.jpg" class="d-block w-100 card-img-top" alt="Festive Porch and Tabletop Decor">
-                </div>
-                <div class="carousel-item">
-                  <img src="images/seasonal-decor-6.jpg" class="d-block w-100 card-img-top" alt="Rustic Seasonal Wood Art">
-                </div>
-                <div class="carousel-item">
-                  <img src="images/seasonal-decor-7.jpg" class="d-block w-100 card-img-top" alt="Handcrafted Holiday Woodcraft">
-                </div>
-              </div>
-
-              <!-- Prev / Next Controls -->
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselDecor" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselDecor" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-
-            <div class="card-body d-flex flex-column">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge badge-completed py-1 px-2">Holiday & Home</span>
-                <small class="text-muted"><i class="bi bi-images me-1"></i>7 Photos</small>
-              </div>
-              <h3 class="h5 card-title fw-bold">Seasonal Wooden Decorations</h3>
-              <p class="card-text text-muted flex-grow-1">Hand-cut holiday signs, rustic porch leaners, pumpkin sets, and custom-themed wooden holiday decor for every season of the year.</p>
             </div>
           </div>
         </div>
